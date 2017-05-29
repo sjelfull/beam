@@ -28,11 +28,17 @@ class ComposerStaticInitfb21865a2fa9bbb47f041ccde618c9dd
         ),
     );
 
+    public static $classMap = array (
+        'XLSXWriter' => __DIR__ . '/..' . '/mk-j/php_xlsxwriter/xlsxwriter.class.php',
+        'XLSXWriter_BuffererWriter' => __DIR__ . '/..' . '/mk-j/php_xlsxwriter/xlsxwriter.class.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitfb21865a2fa9bbb47f041ccde618c9dd::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitfb21865a2fa9bbb47f041ccde618c9dd::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitfb21865a2fa9bbb47f041ccde618c9dd::$classMap;
 
         }, null, ClassLoader::class);
     }

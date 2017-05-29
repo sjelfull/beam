@@ -10,6 +10,7 @@
 	],
 	"require": {
 		"composer/installers": "~1.0",
-		"league/csv": "^8.2"
+		"league/csv": "^8.2",
+		"mk-j/php_xlsxwriter": "^0.32.0"
 	}
 }

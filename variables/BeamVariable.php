@@ -21,4 +21,9 @@ class BeamVariable
     {
         return craft()->beam->csv($options);
     }
+
+    public function xlsx($options = [])
+    {
+        return craft()->beam->xlsx($options);
+    }
 }

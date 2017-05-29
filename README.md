@@ -36,8 +36,21 @@ To generate an CSV:
 {% endspaceless %}
 ```
 
-## Beam Roadmap
 
-- Add XLS support
+To generate an XLSX:
+
+```twig
+{% spaceless %}
+{% set options = {
+    header: ['Email', 'Name'],
+    rows: [
+        [ 'test@example.com', 'John Doe' ],
+        [ 'another+test@example.com', 'Jane Doe' ],
+        [ 'third+test@example.com', 'Trond Johansen' ],
+    ]
+} %}
+{{ craft.beam.xlsx(options) }}
+{% endspaceless %}
+```
 
 Brought to you by [Superbig](https://superbig.co)
