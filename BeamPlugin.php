@@ -46,7 +46,7 @@ class BeamPlugin extends BasePlugin
      */
     public function getDocumentationUrl ()
     {
-        return 'https://github.com/sjelfull/beam/blob/master/README.md';
+        return 'https://superbig.co/plugins/beam';
     }
 
     /**
@@ -54,7 +54,7 @@ class BeamPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl ()
     {
-        return 'https://raw.githubusercontent.com/sjelfull/beam/master/releases.json';
+        return 'https://superbig.co/plugins/beam/feed';
     }
 
     /**
@@ -87,13 +87,5 @@ class BeamPlugin extends BasePlugin
     public function getDeveloperUrl ()
     {
         return 'https://superbig.co';
-    }
-
-    /**
-     * @return bool
-     */
-    public function hasCpSection ()
-    {
-        return false;
     }
 }
