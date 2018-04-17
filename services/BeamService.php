@@ -61,7 +61,11 @@ class BeamService extends BaseApplicationComponent
             $headers = [ ];
 
             foreach ($options['header'] as $header) {
-                $headers[ $header ] = 'string';
+                if (is_array($header)) {
+                  $headers[$header['header']] = $header['format'];
+                } else {
+                  $headers[ $header ] = 'string';
+                }
             }
 
             // Insert the headers

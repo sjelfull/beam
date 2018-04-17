@@ -42,15 +42,18 @@ To generate an XLSX:
 ```twig
 {% spaceless %}
 {% set options = {
-    header: ['Email', 'Name'],
+    header: ['Email', 'Name', { header: 'age', format: 'integer' }],
     rows: [
-        [ 'test@example.com', 'John Doe' ],
-        [ 'another+test@example.com', 'Jane Doe' ],
-        [ 'third+test@example.com', 'Trond Johansen' ],
+        [ 'test@example.com', 'John Doe', 31 ],
+        [ 'another+test@example.com', 'Jane Doe', 32 ],
+        [ 'third+test@example.com', 'Trond Johansen', 33 ],
     ]
 } %}
 {{ craft.beam.xlsx(options) }}
 {% endspaceless %}
 ```
+
+Note that you can also can also specify data formats for the columns. The default
+is string but PHP XLSXWriter offers [a number of data formats](https://github.com/mk-j/PHP_XLSXWriter).
 
 Brought to you by [Superbig](https://superbig.co)
